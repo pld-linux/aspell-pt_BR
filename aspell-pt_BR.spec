@@ -10,6 +10,7 @@ Source0:	http://ftp.gnu.org/gnu/aspell/dict/pt_BR/aspell6-pt_BR-%{version}-0.tar
 # Source0-md5:	e082a8956882eb94a67c12e1b8c4a324
 URL:		http://aspell.sourceforge.net/
 BuildRequires:	aspell >= 3:0.60.0
+BuildRequires:	which
 Requires:	aspell >= 3:0.60.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
