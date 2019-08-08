@@ -2,13 +2,14 @@ Summary:	Portuguese dictionaries for aspell
 Summary(pl.UTF-8):	Portugalskie słowniki dla aspella
 Summary(pt_BR.UTF-8):	Dicionário de português para o aspell
 Name:		aspell-pt_BR
-Version:	20090702
+Version:	20131030
 Release:	1
+%define	subv	12-0
 License:	LGPL v2.1+
 Group:		Applications/Text
-Source0:	http://ftp.gnu.org/gnu/aspell/dict/pt_BR/aspell6-pt_BR-%{version}-0.tar.bz2
-# Source0-md5:	e082a8956882eb94a67c12e1b8c4a324
-URL:		http://aspell.sourceforge.net/
+Source0:	https://ftp.gnu.org/gnu/aspell/dict/pt_BR/aspell6-pt_BR-%{version}-%{subv}.tar.bz2
+# Source0-md5:	9ac547609aeaa3891dfa00407b7ffb83
+URL:		http://aspell.net/
 BuildRequires:	aspell >= 3:0.60.0
 BuildRequires:	which
 Requires:	aspell >= 3:0.60.0
@@ -25,7 +26,7 @@ Dicionários da língua portuguesa para o verificador ortográfico
 aspell.
 
 %prep
-%setup -q -n aspell6-pt_BR-%{version}-0
+%setup -q -n aspell6-pt_BR-%{version}-%{subv}
 
 %build
 # note: configure is not autoconf-generated
@@ -44,7 +45,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Copyright README doc/{NEWS,README_aspell.txt}
-%lang(pt_BR) %doc doc/README_ooo.txt
-%{_libdir}/aspell/*
-%{_datadir}/aspell/*
+%doc Copyright README
+%{_libdir}/aspell/pt_BR.multi
+%{_libdir}/aspell/pt_BR.rws
+%{_libdir}/aspell/brasileiro.alias
+%{_libdir}/aspell/brazilian.alias
+%{_datadir}/aspell/br-abnt2.kbd
+%{_datadir}/aspell/pt_BR.dat
+%{_datadir}/aspell/pt_BR_affix.dat
