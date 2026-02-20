@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Portugalskie słowniki dla aspella
 Summary(pt_BR.UTF-8):	Dicionário de português para o aspell
 Name:		aspell-pt_BR
 Version:	20131030
-Release:	1
+Release:	2
 %define	subv	12-0
 License:	LGPL v2.1+
 Group:		Applications/Text
