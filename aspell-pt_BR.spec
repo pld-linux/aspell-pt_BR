@@ -13,6 +13,7 @@ URL:		http://aspell.net/
 BuildRequires:	aspell >= 3:0.60.0
 BuildRequires:	which
 Requires:	aspell >= 3:0.60.0
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,10 +47,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Copyright README
-%{_libdir}/aspell/pt_BR.multi
-%{_libdir}/aspell/pt_BR.rws
-%{_libdir}/aspell/brasileiro.alias
-%{_libdir}/aspell/brazilian.alias
+%{_prefix}/lib/aspell/pt_BR.multi
+%{_prefix}/lib/aspell/pt_BR.rws
+%{_prefix}/lib/aspell/brasileiro.alias
+%{_prefix}/lib/aspell/brazilian.alias
 %{_datadir}/aspell/br-abnt2.kbd
 %{_datadir}/aspell/pt_BR.dat
 %{_datadir}/aspell/pt_BR_affix.dat
